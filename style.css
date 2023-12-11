@@ -1,0 +1,321 @@
+.blaze-slider{
+    --slides-to-show:1;
+    --slide-gap:20px;
+    direction:ltr
+}
+.blaze-container{
+    position:relative;
+    width: 87%;
+}
+.blaze-track-container{
+    overflow:hidden
+}
+.blaze-track{
+    will-change:transform;
+    touch-action:pan-y;
+    display:flex;
+    gap:var(--slide-gap);
+    --slide-width:calc((100% - (var(--slides-to-show) - 1) * var(--slide-gap)) /var(--slides-to-show));
+    box-sizing:border-box
+}
+.blaze-track>*{
+    box-sizing:border-box;
+    width:var(--slide-width);
+    flex-shrink:0
+}
+
+.blaze-pagination {
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 20px;
+  }
+  
+  .blaze-pagination button {
+    font-size: 0;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    outline: none;
+    border: none;
+    background: hsl(0, 2%, 88%);
+    cursor: pointer;
+    transition: transform 200ms ease, background-color 300ms ease;
+  }
+  
+  .blaze-pagination button.active {
+    background: #eebe00;
+    transform: scaleX(2);
+  }
+
+
+
+
+/* Bundan sonrası benim yazdığım kodlar */
+*{
+     font-family:'Raleway', sans-serif; ;
+}
+body {
+  padding: 0;
+  margin: 0;
+}
+h1, h2 {
+    color: rgb(58, 58, 58)
+}
+img {
+    border-radius: 50%;
+    width: 210px; 
+    height: 210px;
+    margin-bottom: 20px;
+}
+.card-content a {
+  text-decoration: none;
+  color: black;
+}
+#header {
+    color: rgb(57, 56, 56);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 1em 0;
+    font-weight:bold ;
+  
+}
+.image-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0px 0 20px 0;
+    box-shadow: 0 2px 16px rgb(223 223 223);
+    border-radius: 5px;
+    width: 300px;
+    margin: 5px;
+    position: relative
+}
+.image-card:hover{
+
+  box-shadow: 0 0 7px #d6ac01;
+
+}
+.card-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.card-content p {
+    text-align: center;
+}
+
+[data-tab-content] {
+    display: none;
+  }
+
+  .active[data-tab-content] {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .tabs {
+    display: flex;
+    justify-content: center;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+  }
+  .tab {
+    cursor: pointer;
+    padding: 10px;
+    border-bottom: 2px solid rgb(224, 224, 224);
+    margin-right: 20px;
+    color: rgb(131, 131, 131);
+    font-weight: bold;
+  }
+
+  .tab.active {
+    border-bottom: 2px solid #ddb412;
+    color:  rgb(69, 68, 68);
+  }
+
+  .tab-content {
+    margin-left: 20px;
+    margin-right: 20px;
+    margin-top: 30px;
+  }
+
+.blaze-div {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.blaze-button {
+    width: 50px;
+    height: 50px;
+    border-radius: 5px;
+    background: #fff;
+    border: 1px solid rgb(226, 226, 226);
+    color: grey;
+}
+.blaze-button:hover {
+  width: 50px;
+  height: 50px;
+  border-radius: 5px;
+  background: #fff;
+  border: 1px solid #eebe00;
+  color: #eebe00;
+}
+.tukendi {
+    padding: 7px;
+    color: #f1f1f1;
+    background-color: rgb(45, 44, 44);
+    font-weight: 500;
+    position: absolute;
+    z-index: 999;
+    top: 100px;
+    left: 85px;
+}
+.img-div {
+    position: relative;
+    padding: 20px;
+}
+.hediyeli {
+    background-image:
+      linear-gradient(to top left, transparent 50%, #8d95c9 0),
+      linear-gradient(to left bottom, #8d95c9 50%, transparent 0);
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    background-position: left, right;
+    width: 80px;
+    height: 45px;
+    position: absolute;
+    left: 160px;
+    z-index: 999;
+    display: flex;
+    justify-content: center;
+    padding-top:5px;
+  
+}
+.hediyeli span, .yeni span {
+    color: #fff;
+    z-index: 9999999;
+    font-size: 12px;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+.yeni {
+    background-image:
+    linear-gradient(to top left, transparent 50%,#eebe00 0),
+    linear-gradient(to left bottom, #eebe00 50%, transparent 0);
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  background-position: left, right;
+  width: 50px;
+  height: 45px;
+  position: absolute;
+  z-index: 999;
+  display: flex;
+  justify-content: center;
+  padding-top:5px; 
+  right: 150px;
+}
+ .indirim {
+  background-color: #fff;
+  color: rgb(218, 5, 5);;
+  font-weight: bold;
+  font-size: 14px;
+  border: 1px solid rgb(218, 5, 5);
+  padding: 5px 7px;
+  border-radius: 5px;
+ }
+  /* media etiketleri  */
+
+  @media  (min-width: 600px) and (max-width: 768px) {
+    .blaze-slider {
+      --slides-to-show: 2;
+    }
+    .image-card {
+      width: 45%
+    }
+    .img-div img {
+      width: 180px;
+      height: 180px;
+    }
+    .hediyeli, .yeni {
+      width: 53px;
+      
+    }
+    .hediyeli span , .yeni span {
+      font-size: 8px;
+    }
+    .tukendi  {
+      top: 90px;
+      left: 75px;
+    }
+  }
+  @media (min-width: 431px) and (max-width: 599px){
+    .image-card {
+      width: 95%;
+    }
+    .blaze-slider {
+      --slides-to-show: 1;
+    }
+    .tab {
+      font-size: 12px;
+    }
+    #header {
+      font-size: 18px;
+    }
+    .hediyeli {
+      width: 53px;
+      left: 50px;
+    }
+    .yeni {
+      right: 30px;
+    }
+    .hediyeli span , .yeni span {
+      font-size: 8px;
+    }
+    .img-div img {
+      width: 200px;
+      height:200px;
+    }
+  }
+  
+  @media (max-width: 430px) {
+    .hediyeli {
+      right: 150px;
+    }
+    .yeni {
+      right: 150px;
+    }
+    .image-card {
+      width: 95%;
+    }
+    .blaze-slider {
+      --slides-to-show: 1;
+    }
+    .tab {
+      font-size: 12px;
+    }
+    #header {
+      font-size: 18px;
+    }
+    .hediyeli {
+      width: 53px;
+      left: 50px;
+    }
+    .yeni {
+      right: 30px;
+    }
+    .hediyeli span , .yeni span {
+      font-size: 8px;
+    }
+    .img-div img {
+      width: 200px;
+      height:200px;
+    
+  }
+}
+
+ 
